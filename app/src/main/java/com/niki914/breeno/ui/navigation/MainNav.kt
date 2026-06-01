@@ -84,6 +84,14 @@ fun Activity.MainNav() {
                 }
             )
         }
+
+        animComposable(Screens.OpenAIRules.route) {
+            OpenAIRulesScreen(
+                onBack = {
+                    nav.popBackStack()
+                }
+            )
+        }
     }
 }
 

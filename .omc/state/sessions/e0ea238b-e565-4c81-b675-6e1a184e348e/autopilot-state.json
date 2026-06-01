@@ -1,0 +1,10 @@
+{
+  "active": true,
+  "started_at": "2026-05-31T08:39:51.246Z",
+  "original_prompt": "#  阅读当前项目代码并理解功能，这是一个完整可运行的项目\n#  在已有功能上增加以下功能，只生成计划先不修改：\n  1. openai参数注入替换：根据用户输入的文本，匹配到指定正则的，则替换或增加openai请求的header和body参数，比如：用户输入\"让小二记录笔记...\"，匹配到正则\".*小二.*\"，替换header中x-openclaw-session-key为main, body的model为main\n  2. 提供页面用户可以录入多个: 正则匹配和需要替换的header和body参数\n  3. 如果没有匹配到，则使用原小布大模型对话\n/autopilot",
+  "session_id": "e0ea238b-e565-4c81-b675-6e1a184e348e",
+  "project_path": "/config/project/breeno_openai",
+  "reinforcement_count": 1,
+  "awaiting_confirmation": true,
+  "last_checked_at": "2026-05-31T09:01:52.940Z"
+}

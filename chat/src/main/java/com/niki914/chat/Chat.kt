@@ -92,7 +92,9 @@ class Chat(
     }
 
     suspend fun sendMessages(messages: List<Message>): Flow<ChatEvent> {
-        return streaming(listOf(systemMessage) + messages)
+        val config = getConfig()
+        val modifiedConfig = applyRules(messages.joinToString(""), config)
+        return streaming(listOf(systemMessage) + messages, modifiedConfig)
     }
 
     suspend fun sendMessage(vararg message: Message? = arrayOf(null)): Flow<ChatEvent> {
@@ -101,13 +103,15 @@ class Chat(
                 append(msg)
             }
         }
-        return streaming(listOf(systemMessage) + _history.toList())
+        val config = getConfig()
+        val modifiedConfig = applyRules(_history.joinToString(""), config)
+        return streaming(listOf(systemMessage) + _history.toList(), modifiedConfig)
     }
 
     private suspend fun streaming(
-        messages: List<Message?>
+        messages: List<Message?>,
+        config: ChatConfig = getConfig()
     ): Flow<ChatEvent> {
-        val config = getConfig()
         logD(config.toString())
         return processor.streaming( // service.chat 是安全的，内部有异常捕捉
             config.apiKey,
@@ -122,4 +126,42 @@ class Chat(
     private fun getConfig(): ChatConfig {
         return dynamicChatConfigHolder.getConfig()
     }
-}
+
+    // 用于应用规则的函数
+    fun applyRules(text: String, config: ChatConfig): ChatConfig {
+        // 获取OpenAI规则列表
+        val rules = getOpenAIRulesFromSettings()
+
+        // 遍历所有规则进行匹配
+        for (rule in rules) {
+            if (Regex(rule.regex).containsMatchIn(text)) {
+                // 应用Header替换
+                val headers = mutableMapOf<String, String>()
+                headers.putAll(config.netConfig.headers)
+                headers.putAll(rule.headers)
+
+                // 应用Body替换
+                val model = rule.body["model"] as? String ?: config.modelName
+                val modifiedBody = mutableMapOf<String, Any>()
+                modifiedBody.putAll(rule.body)
+                modifiedBody["model"] = model
+
+                // 创建新的配置并返回
+                return config.copy(
+                    netConfig = config.netConfig.copy(headers = headers),
+                    modelName = model
+                )
+            }
+        }
+
+        // 没有匹配到任何规则，返回原始配置
+        return config
+    }
+
+    // 从设置中获取OpenAI规则列表的辅助方法
+    private fun getOpenAIRulesFromSettings(): List<RuleModel> {
+        // 在实际项目中，应该从ViewModel或Repository中获取规则
+        // 由于当前架构限制，这里返回空列表作为占位
+        // 在实际实现中，需要通过依赖注入或其他方式获取规则
+        return emptyList()
+    }

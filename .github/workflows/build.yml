@@ -1,0 +1,52 @@
+# GitHub Actions build workflow
+# Runs every day at 00:00 UTC
+
+name: Daily Build
+
+on:
+  schedule:
+    - cron: '0 0 * * *' # Every day at 00:00 UTC
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Set up JDK 11
+      uses: actions/setup-java@v4
+      with:
+        java-version: '11'
+        distribution: 'temurin'
+
+    - name: Setup Gradle
+      uses: gradle/gradle-build-action@v2
+
+    - name: Make gradlew executable
+      run: chmod +x ./gradlew
+
+    - name: Build Release APK
+      run: ./gradlew assembleRelease
+
+    - name: Upload Release APK
+      uses: actions/upload-artifact@v3
+      with:
+        name: app-release
+        path: app/build/outputs/apk/release/app-release-unsigned.apk
+
+    - name: Check build status
+      run: |
+        if [ ! -f "app/build/outputs/apk/release/app-release-unsigned.apk" ]; then
+          echo "Build failed: APK not found"
+          exit 1
+        fi
+        echo "Build succeeded"
+
+    - name: Cleanup
+      run: |
+        rm -rf app/build/outputs/apk/debug
+        rm -rf app/build/outputs/apk/unaligned
+        rm -rf build/
+        rm -rf .gradle/

@@ -12,4 +12,5 @@ enum class MainMenuChoices(
     Report(R.string.report_ui_string),
     Test(R.string.testing_ui_string),
     About(R.string.about_ui_string)
-}
+
+    OpenAIRules(R.string.openai_rules_ui_string)

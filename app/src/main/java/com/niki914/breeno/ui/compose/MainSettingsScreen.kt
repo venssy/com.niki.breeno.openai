@@ -208,6 +208,13 @@ fun MainTopBar(onMenuItemClicked: (MainMenuChoices) -> Unit = {}) {
                         }
                     )
                 }
+                DropdownMenuItem(
+                    text = { Text(string.openai_rules_ui_string) },
+                    onClick = {
+                        showMenu = false
+                        onMenuItemClicked(MainMenuChoices.OpenAIRules)
+                    }
+                )
             }
         }
     )

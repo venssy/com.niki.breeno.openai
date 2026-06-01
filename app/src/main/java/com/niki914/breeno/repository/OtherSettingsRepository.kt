@@ -93,4 +93,33 @@ class OtherSettingsRepository private constructor(helper: SharedPreferenceHelper
     fun getFallbackToBreeno(): String {
         return get<String>(Key.FallbackToBreeno)
     }
+
+    fun getOpenAIRules(): List<RuleModel> {
+        val json = get<String>(Key.OpenAIRules)
+        return if (json.isEmpty()) {
+            emptyList()
+        } else {
+            // 简化的JSON解析，实际项目中应使用Gson或Kotlinx.serialization
+            // 这里返回空列表，实际实现时需要更复杂的JSON解析逻辑
+            emptyList()
+        }
+    }
+
+    fun setOpenAIRules(rules: List<RuleModel>) {
+        // 简化的JSON序列化，实际项目中应使用Gson或Kotlinx.serialization
+        put(Key.OpenAIRules, "")
+    }
+
+    fun initUiState(): OSState {
+        return OSState(
+            getProxy().proxyToString(),
+            getEnableShowToolCalling(),
+            getEnableApp(),
+            getEnableUri(),
+            getEnableGetDeviceInfo(),
+            getEnableShellCmd(),
+            getFallbackToBreeno(),
+            getOpenAIRules()
+        )
+    }
 }

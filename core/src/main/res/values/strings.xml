@@ -76,4 +76,17 @@
     <string name="ask_anything">发送消息...</string>
     <string name="send">发送</string>
     <string name="chat_testing_bar">对话测试</string>
+    <string name="openai_rules_ui_string">OpenAI规则</string>
+    <string name="openai_rules_ui_description">配置OpenAI请求的参数替换规则</string>
+    <string name="add_rule">添加规则</string>
+    <string name="edit_rule">编辑规则</string>
+    <string name="delete">删除</string>
+    <string name="regex_pattern">正则表达式</string>
+    <string name="regex_pattern_description">用于匹配用户输入的正则表达式</string>
+    <string name="headers">Headers</string>
+    <string name="header_key">Header键</string>
+    <string name="header_value">Header值</string>
+    <string name="body">Body</string>
+    <string name="body_key">Body键</string>
+    <string name="body_value">Body值</string>
 </resources>

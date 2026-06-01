@@ -1,0 +1,339 @@
+{
+  "version": "1.0.0",
+  "lastScanned": 1780215889411,
+  "projectRoot": "/config/project/breeno_openai",
+  "techStack": {
+    "languages": [
+      {
+        "name": "Kotlin",
+        "version": null,
+        "confidence": "high",
+        "markers": [
+          "build.gradle.kts"
+        ]
+      }
+    ],
+    "frameworks": [],
+    "packageManager": "gradle",
+    "runtime": null
+  },
+  "build": {
+    "buildCommand": null,
+    "testCommand": null,
+    "lintCommand": null,
+    "devCommand": null,
+    "scripts": {}
+  },
+  "conventions": {
+    "namingStyle": null,
+    "importStyle": null,
+    "testPattern": null,
+    "fileOrganization": null
+  },
+  "structure": {
+    "isMonorepo": false,
+    "workspaces": [],
+    "mainDirectories": [
+      "app"
+    ],
+    "gitBranches": {
+      "defaultBranch": "main",
+      "branchingStrategy": null
+    }
+  },
+  "customNotes": [],
+  "directoryMap": {
+    "app": {
+      "path": "app",
+      "purpose": "Application code",
+      "fileCount": 3,
+      "lastAccessed": 1780215889408,
+      "keyFiles": [
+        "build.gradle.kts",
+        "proguard-rules.pro"
+      ]
+    },
+    "chat": {
+      "path": "chat",
+      "purpose": null,
+      "fileCount": 4,
+      "lastAccessed": 1780215889409,
+      "keyFiles": [
+        "build.gradle.kts",
+        "consumer-rules.pro",
+        "proguard-rules.pro"
+      ]
+    },
+    "core": {
+      "path": "core",
+      "purpose": null,
+      "fileCount": 4,
+      "lastAccessed": 1780215889409,
+      "keyFiles": [
+        "build.gradle.kts",
+        "consumer-rules.pro",
+        "proguard-rules.pro"
+      ]
+    },
+    "gradle": {
+      "path": "gradle",
+      "purpose": null,
+      "fileCount": 0,
+      "lastAccessed": 1780215889410,
+      "keyFiles": []
+    },
+    "hooker": {
+      "path": "hooker",
+      "purpose": null,
+      "fileCount": 4,
+      "lastAccessed": 1780215889410,
+      "keyFiles": [
+        "build.gradle.kts",
+        "consumer-rules.pro",
+        "proguard-rules.pro"
+      ]
+    },
+    "img": {
+      "path": "img",
+      "purpose": null,
+      "fileCount": 7,
+      "lastAccessed": 1780215889410,
+      "keyFiles": [
+        "i1.jpg",
+        "i1_en.jpg",
+        "i2.jpg",
+        "i2_en.jpg",
+        "pa3.jpg"
+      ]
+    },
+    "tool-call": {
+      "path": "tool-call",
+      "purpose": null,
+      "fileCount": 4,
+      "lastAccessed": 1780215889410,
+      "keyFiles": [
+        "build.gradle.kts",
+        "consumer-rules.pro",
+        "proguard-rules.pro"
+      ]
+    },
+    "app/src": {
+      "path": "app/src",
+      "purpose": "Source code",
+      "fileCount": 0,
+      "lastAccessed": 1780215889410,
+      "keyFiles": []
+    },
+    "chat/src": {
+      "path": "chat/src",
+      "purpose": "Source code",
+      "fileCount": 0,
+      "lastAccessed": 1780215889410,
+      "keyFiles": []
+    },
+    "core/src": {
+      "path": "core/src",
+      "purpose": "Source code",
+      "fileCount": 0,
+      "lastAccessed": 1780215889411,
+      "keyFiles": []
+    },
+    "hooker/src": {
+      "path": "hooker/src",
+      "purpose": "Source code",
+      "fileCount": 0,
+      "lastAccessed": 1780215889411,
+      "keyFiles": []
+    },
+    "tool-call/src": {
+      "path": "tool-call/src",
+      "purpose": "Source code",
+      "fileCount": 0,
+      "lastAccessed": 1780215889411,
+      "keyFiles": []
+    }
+  },
+  "hotPaths": [
+    {
+      "path": "app/src/main/java/com/niki914/breeno/repository/OtherSettingsRepository.kt",
+      "accessCount": 8,
+      "lastAccessed": 1780271822931,
+      "type": "file"
+    },
+    {
+      "path": "app/src/main/java/com/niki914/breeno/viewmodel/OtherSettingsViewModel.kt",
+      "accessCount": 5,
+      "lastAccessed": 1780271920888,
+      "type": "file"
+    },
+    {
+      "path": "app/src/main/java/com/niki914/breeno/ui/compose/MainSettingsScreen.kt",
+      "accessCount": 5,
+      "lastAccessed": 1780272398984,
+      "type": "file"
+    },
+    {
+      "path": "chat/src/main/java/com/niki914/chat/Chat.kt",
+      "accessCount": 5,
+      "lastAccessed": 1780272730261,
+      "type": "file"
+    },
+    {
+      "path": "app/src/main/java/com/niki914/breeno/ui/navigation/MainNav.kt",
+      "accessCount": 4,
+      "lastAccessed": 1780272163681,
+      "type": "file"
+    },
+    {
+      "path": "app/src/main/java/com/niki914/breeno/ui/compose/OtherSettingsScreen.kt",
+      "accessCount": 3,
+      "lastAccessed": 1780272000886,
+      "type": "file"
+    },
+    {
+      "path": "core/src/main/java/com/niki914/core/Key.kt",
+      "accessCount": 2,
+      "lastAccessed": 1780271535794,
+      "type": "file"
+    },
+    {
+      "path": "app/src/main/java/com/niki914/breeno/ui/navigation/Screens.kt",
+      "accessCount": 2,
+      "lastAccessed": 1780272211021,
+      "type": "file"
+    },
+    {
+      "path": "core/src/main/java/com/niki914/core/MainMenuChoices.kt",
+      "accessCount": 2,
+      "lastAccessed": 1780272460380,
+      "type": "file"
+    },
+    {
+      "path": "core/src/main/res/values/strings.xml",
+      "accessCount": 2,
+      "lastAccessed": 1780272563424,
+      "type": "file"
+    },
+    {
+      "path": "chat/src/main/java/com/niki914/chat/inner/ChatApiService.kt",
+      "accessCount": 2,
+      "lastAccessed": 1780272672811,
+      "type": "file"
+    },
+    {
+      "path": "settings.gradle.kts",
+      "accessCount": 1,
+      "lastAccessed": 1780217732182,
+      "type": "file"
+    },
+    {
+      "path": "chat/src/main/java/com/niki914/chat/ChatConfigBuilder.kt",
+      "accessCount": 1,
+      "lastAccessed": 1780217746493,
+      "type": "file"
+    },
+    {
+      "path": "chat/src/main/java/com/niki914/chat/inner/ChatConfig.kt",
+      "accessCount": 1,
+      "lastAccessed": 1780217757601,
+      "type": "file"
+    },
+    {
+      "path": "tool-call/src/main/java/com/niki914/tool/call/ToolManager.kt",
+      "accessCount": 1,
+      "lastAccessed": 1780217796694,
+      "type": "file"
+    },
+    {
+      "path": "core/src/main/java/com/niki914/core/Logger.kt",
+      "accessCount": 1,
+      "lastAccessed": 1780217807279,
+      "type": "file"
+    },
+    {
+      "path": "chat/src/main/java/com/niki914/net/DynamicOkhttpClientManager.kt",
+      "accessCount": 1,
+      "lastAccessed": 1780217857216,
+      "type": "file"
+    },
+    {
+      "path": "chat/src/main/java/com/niki914/net/NetworkConfigBuilder.kt",
+      "accessCount": 1,
+      "lastAccessed": 1780217902531,
+      "type": "file"
+    },
+    {
+      "path": "chat/src/main/java/com/niki914/net/inner/NetworkConfig.kt",
+      "accessCount": 1,
+      "lastAccessed": 1780217933587,
+      "type": "file"
+    },
+    {
+      "path": "chat/src/main/java/com/niki914/net/inner/DynamicNetworkConfigHolder.kt",
+      "accessCount": 1,
+      "lastAccessed": 1780217944709,
+      "type": "file"
+    },
+    {
+      "path": "chat/src/main/java/com/niki914/net/inner/DynamicAbilityInterceptor.kt",
+      "accessCount": 1,
+      "lastAccessed": 1780217954757,
+      "type": "file"
+    },
+    {
+      "path": "chat/src/main/java/com/niki914/chat/inner/ChatStreamProcessor.kt",
+      "accessCount": 1,
+      "lastAccessed": 1780217966599,
+      "type": "file"
+    },
+    {
+      "path": "app/src/main/AndroidManifest.xml",
+      "accessCount": 1,
+      "lastAccessed": 1780218001760,
+      "type": "file"
+    },
+    {
+      "path": "app/src/main/java/com/niki914/breeno/ui/activity/MainActivity.kt",
+      "accessCount": 1,
+      "lastAccessed": 1780218017990,
+      "type": "file"
+    },
+    {
+      "path": "app/src/main/java/com/niki914/breeno/ui/compose/EXT.kt",
+      "accessCount": 1,
+      "lastAccessed": 1780218091319,
+      "type": "file"
+    },
+    {
+      "path": "app/src/main/java/com/niki914/breeno/repository/MainSettingsRepository.kt",
+      "accessCount": 1,
+      "lastAccessed": 1780218195456,
+      "type": "file"
+    },
+    {
+      "path": "core/src/main/java/com/niki914/core/repository/SharedPrefsRepository.kt",
+      "accessCount": 1,
+      "lastAccessed": 1780218210591,
+      "type": "file"
+    },
+    {
+      "path": "core/src/main/java/com/niki914/core/utils/SharedPreferenceHelper.kt",
+      "accessCount": 1,
+      "lastAccessed": 1780218221599,
+      "type": "file"
+    },
+    {
+      "path": "core/src/main/java/com/niki914/core/model/RuleModel.kt",
+      "accessCount": 1,
+      "lastAccessed": 1780271496388,
+      "type": "file"
+    },
+    {
+      "path": "app/src/main/java/com/niki914/breeno/ui/compose/OpenAIRulesScreen.kt",
+      "accessCount": 1,
+      "lastAccessed": 1780271969616,
+      "type": "file"
+    }
+  ],
+  "userDirectives": []
+}

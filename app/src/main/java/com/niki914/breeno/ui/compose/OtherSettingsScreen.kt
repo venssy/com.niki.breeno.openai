@@ -126,6 +126,14 @@ fun OtherSettingsScreen(
                 }
             )
 
+            StringSettingItem(
+                key = Key.OpenAIRules,
+                currentValue = "",
+                onChange = { str ->
+                    viewModel.sendIntent(OSIntent.SaveValue(Key.OpenAIRules, str))
+                }
+            )
+
             Text(
                 text = stringResource(string.might_cause_error_msg),
                 style = MaterialTheme.typography.bodySmall,

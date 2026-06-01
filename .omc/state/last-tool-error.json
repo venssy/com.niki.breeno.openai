@@ -1,0 +1,7 @@
+{
+  "tool_name": "Bash",
+  "tool_input_preview": "{\"command\":\"ls -la .github/workflows/\"}",
+  "error": "Exit code 2\nls: 无法访问 '.github/workflows/': 没有那个文件或目录",
+  "timestamp": "2026-06-01T00:40:29.482Z",
+  "retry_count": 1
+}

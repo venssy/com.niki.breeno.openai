@@ -167,6 +167,14 @@ sealed class Key(
         ConfigSettingType.SWITCH
     )
 
+    data object OpenAIRules : Key(
+        "openai_rules",
+        string.openai_rules_ui_string,
+        string.openai_rules_ui_description,
+        "",
+        ConfigSettingType.INPUT
+    )
+
     ///////// SHELL CMD SETTINGS END /////////
     ///////// CHAT TEST START /////////
 

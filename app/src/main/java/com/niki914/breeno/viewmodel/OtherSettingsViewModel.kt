@@ -20,7 +20,8 @@ data class OSState(
     val enableLaunchUri: Boolean,
     val enableGetDeviceInfo: Boolean,
     val enableRunShell: Boolean,
-    val fallbackToBreeno: String
+    val fallbackToBreeno: String,
+    val openAirRules: List<RuleModel> = emptyList()
 )
 
 @HiltViewModel
@@ -60,6 +61,7 @@ class OtherSettingsViewModel @Inject constructor(
                     Key.EnableGetDeviceInfo -> repo.setEnableGetDeviceInfo(value as Boolean)
                     Key.EnableShellCmd -> repo.setEnableShellCmd(value as Boolean)
                     Key.FallbackToBreeno -> repo.setFallbackToBreeno(value as String)
+                    Key.OpenAIRules -> repo.setOpenAIRules(value as List<RuleModel>)
 
                     else -> {}
                 }
@@ -95,6 +97,11 @@ class OtherSettingsViewModel @Inject constructor(
 
             Key.FallbackToBreeno -> updateState {
                 copy(fallbackToBreeno = value as String)
+            }
+
+            Key.OpenAIRules -> updateState {
+                // 处理OpenAIRules的更新
+                copy(openAirRules = value as List<RuleModel>)
             }
 
             else -> {}

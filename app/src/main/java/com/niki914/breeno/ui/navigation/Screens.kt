@@ -5,4 +5,6 @@ sealed class Screens(val route: String) {
     object OtherSettings : Screens("other_settings_screen")
     object ShellCmdSettings : Screens("shell_cmd_settings_screen")
     object ChatTest : Screens("chat_test_screen")
+
+    object OpenAIRules : Screens("openai_rules_screen")
 }
